@@ -1,5 +1,5 @@
 # ringzer0team-ctf
-A collection of assets for RingZer0's challenges
+RingZer0 Team's online CTF offers you tons of challenges designed to test and improve your hacking skills through hacking challenge
 
 website: http://ringzer0team.com/
 
@@ -19,4 +19,3 @@ SQL Injection (0 / 24)
 Steganography (0 / 13)  
 SysAdmin Linux (0 / 8)  
 Web (0 / 29)  
-

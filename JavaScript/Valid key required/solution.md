@@ -25,9 +25,23 @@ aaaa-bbbb-cccc-dddd-eeee
     l'IF di riga n°33 ci impone che la password una volta elaborata sia uguale a questo
     json di riferimento. DP.
 
+2. Attenzione all'oggetto "ref", nell' debug l'ordine è il seguente:
 
+  H:"r1A"
+  J: 	"jep"
+  K: "L23"
+  T: "BG8"
+  j: 	"M2L"
 
-la password deve:
+password di test, partendo dal presupposto che sia corretto l'ordine del punto 2.
+
+Lr1j-8jeT-3L2K-pBGJ-AM2H (sbagliata)
+
+rispettando l'ordine dell'array punto 1:
+
+ABGH-3jeK-LM2j-pL2J-8r1T (corretta)
+
+*La password deve*
 
 1. riga n°27/28 - la password deve avere una struttura di questo tipo: a-b-c-d-e
 2. riga n°71 - le singole parti devono essere:
