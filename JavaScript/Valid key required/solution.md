@@ -25,6 +25,29 @@ aaaa-bbbb-cccc-dddd-eeee
     l'IF di riga n°33 ci impone che la password una volta elaborata sia uguale a questo
     json di riferimento. DP.
 
+    Utilizzando questa password:
+    abcd-efgh-ilmn-opqr-stuw
+
+    si ottiene:
+
+    w:bcs
+    r:fgo
+    n:lmi
+    h:pqe
+    d:tua
+
+    Quindi:
+      a  b  c   d      e   f   g  h       i   l     m  n       o    p   q    r        s    t    u   w
+    | 1| 2| 3| 4| - | 5| 6| 7| 8| - | 9|10|11|12| - |13|14|15|16| - |17|18|19|20|
+
+    20 : 2-3-17
+    16 : 6-7-13
+    12 : 10-11-9
+    8 : 14-15-5
+    4 : 18-19-1
+
+    Secondo questo schema è possibile ricostruire la password corretta partendo dall'array.
+
 2. Attenzione all'oggetto "ref", nell' debug l'ordine è il seguente:
 
   H:"r1A"
