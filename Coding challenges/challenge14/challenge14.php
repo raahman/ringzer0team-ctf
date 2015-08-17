@@ -10,7 +10,7 @@ echo 'Start on seconds: ' . date('s') . PHP_EOL;
 curl_setopt($ch, CURLOPT_URL, "http://ringzer0team.com/challenges/14");
 //return the transfer as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_COOKIE, "PHPSESSID=t6lvvr5h8njpk1rh267pul8io2");
+curl_setopt($ch, CURLOPT_COOKIE, "PHPSESSID=t4p4a7jcifmb0qp90k5mrqr534");
 
 // $output contains the output string
 $output = curl_exec($ch);
@@ -22,9 +22,9 @@ $dom = str_get_html($output);
 
 $toDecode = '';
 
-foreach ($dom->find('div[class=message]') as $e ) {
-  $toDecode = $e->plaintext;
-}
+$e = $dom->find('div[class=message]', 0)->plaintext;
+
+$toDecode = $e;
 
 // cleanup
 $patterns = [
@@ -37,23 +37,26 @@ $patterns = [
 $toDecode = preg_replace($patterns, '', $toDecode);
 $toDecode = trim($toDecode);
 
-$binarySplitted = str_split($toDecode, 4);
+
+$binarySplitted = str_split($toDecode, 8);
 $hex = '';
 
 foreach ($binarySplitted as $r) 
 {
-  $hex .= pack('H*', base_convert($r , 2, 16)); 
+  $hex .= chr(base_convert($r , 2, 10)); 
   
   // debug
   
-  echo $r . ' - ' . pack('H*', base_convert($r , 2, 16)) . PHP_EOL;
+  //echo $r . ' - ' . chr(base_convert($r , 2, 16)) . PHP_EOL;
 }
+
+//die();
 
 $result = hash('sha512', $hex);
 
 //print_r($binarySplitted);
 
-echo $result . PHP_EOL;
+//echo $result . PHP_EOL;
 
 // chiamata per il ricevere il flag
 curl_setopt($ch, CURLOPT_URL, "http://ringzer0team.com/challenges/14/" . $result);

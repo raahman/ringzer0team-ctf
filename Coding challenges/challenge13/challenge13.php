@@ -8,7 +8,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "http://ringzer0team.com/challenges/13");
 //return the transfer as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_COOKIE, "PHPSESSID=t6lvvr5h8njpk1rh267pul8io2");
+curl_setopt($ch, CURLOPT_COOKIE, "PHPSESSID=	t4p4a7jcifmb0qp90k5mrqr534");
 
 // $output contains the output string
 $output = curl_exec($ch);
