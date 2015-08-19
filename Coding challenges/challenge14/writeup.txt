@@ -1,3 +1,37 @@
+Hash me again  - challenges/14
+
+You have 2 seconds to hash this message using sha512 algorithm
+Send the answer back using http://ringzer0team.com/challenges/14/[your_hash]
+
+So the objectives are:
+
+  - Grab the text from the page : http://ringzer0team.com/challenges/14
+  - Clean the text from all tags, tab and new line.
+  - Convert from Binary to Ascii
+  - Use sha512 algoritm on the text
+  - Send back to : http://ringzer0team.com/challenges/14/[hash]
+
+Deadline : 2 seconds from the first request.
+
+The follow script require:
+PHP5 , CURL and SimpleDomHtml.
+
+Simple Dom Html can be found here:
+http://simplehtmldom.sourceforge.net/
+
+All codes are commented.I decided to use Simpledomhtml for grab easier the text, 
+but if you are more confident with regex can avoid this library.
+
+
+Clarification:
+This time we need split text by 8 digits, so we can convert from binary to ascii.
+
+$ascii .= chr(base_convert($r , 2, 10));
+
+Script will convert one character at time.
+
+############ SCRIPT ############
+
 <?php
 include_once 'vendor/simple_html_dom.php';
 

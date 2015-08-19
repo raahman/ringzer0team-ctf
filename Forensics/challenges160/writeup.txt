@@ -1,0 +1,11 @@
+Who I am? - challenges/160
+ 
+Hint: I'm looking for information about me! The website...
+ 
+Starting from hint, let's do DNS lookup :D
+
+
+// Use "dig" command for a DNS lookup and "ANY" parameter for a full report
+$ dig ringzer0team.com ANY
+
+et voilà
